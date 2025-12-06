@@ -3,7 +3,9 @@
     "allow": [
       "Bash(dir:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: شركة سمو النبلاء للمقاولات العامة\n\n- موقع ويب احترافي بتصميم Dark Theme\n- 9 مشاريع حقيقية من الشركة\n- أنيميشن متقدم مع particles effects\n- تصميم متجاوب لجميع الأجهزة\n- معلومات الشركة الكاملة من PDF\n\n🤖 Generated with Claude Code\nEOF\n)\")",
+      "Bash(git config:*)"
     ],
     "deny": [],
     "ask": []
