@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار API</title>
+</head>
+<body>
+    <h1>اختبار API</h1>
+    <button onclick="testAPI()">اختبار الاتصال</button>
+    <div id="results"></div>
+    
+    <script>
+        const API_BASE_URL = 'http://localhost:8000/api';
+        
+        async function testAPI() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>جاري الاختبار...</p>';
+            
+            try {
+                // Test Stats
+                const statsRes = await fetch(`${API_BASE_URL}/stats`);
+                const stats = await statsRes.json();
+                results.innerHTML += `<h2>الإحصائيات:</h2><pre>${JSON.stringify(stats, null, 2)}</pre>`;
+                
+                // Test Projects
+                const projectsRes = await fetch(`${API_BASE_URL}/projects`);
+                const projects = await projectsRes.json();
+                results.innerHTML += `<h2>المشاريع (${projects.length}):</h2><pre>${JSON.stringify(projects, null, 2)}</pre>`;
+                
+                // Test Services
+                const servicesRes = await fetch(`${API_BASE_URL}/services`);
+                const services = await servicesRes.json();
+                results.innerHTML += `<h2>الخدمات (${services.length}):</h2><pre>${JSON.stringify(services, null, 2)}</pre>`;
+                
+                // Test Settings
+                const settingsRes = await fetch(`${API_BASE_URL}/settings`);
+                const settings = await settingsRes.json();
+                results.innerHTML += `<h2>الإعدادات:</h2><pre>${JSON.stringify(settings, null, 2)}</pre>`;
+                
+            } catch (error) {
+                results.innerHTML += `<p style="color: red;">خطأ: ${error.message}</p>`;
+            }
+        }
+        
+        // Auto test on load
+        window.addEventListener('load', testAPI);
+    </script>
+</body>
+</html>

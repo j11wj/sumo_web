@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الأفق العقارية - التطوير العقاري الحديث</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="image/لوكو القرية copy.png" alt="شعار الشركة" class="logo-img">
+                    <span>سمو النبلاء</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">الرئيسية</a>
+                    <a href="#about" class="nav-link">من نحن</a>
+                    <a href="#projects" class="nav-link">المشاريع</a>
+                    <a href="#services" class="nav-link">الخدمات</a>
+                    <a href="#contact" class="nav-link">تواصل معنا</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">شركة سمو النبلاء للمقاولات العامة المحدودة</h1>
+            <p class="hero-subtitle animate-fade-in-delay">نبني المستقبل معاً من خلال مشاريع عقارية متميزة تجمع بين الجودة والابتكار</p>
+            <div class="hero-buttons animate-fade-in-delay-2">
+                <a href="#projects" class="btn btn-primary">استكشف المشاريع</a>
+                <a href="#contact" class="btn btn-secondary">اتصل بنا</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-tasks"></i>
+                    <h3 class="stat-number" data-target="8">0</h3>
+                    <p>مشروع قيد التنفيذ</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 class="stat-number" data-target="23">0</h3>
+                    <p>نسبة الإنجاز %</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-home"></i>
+                    <h3 class="stat-number" data-target="2500">0</h3>
+                    <p>وحدة سكنية</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-building"></i>
+                    <h3 class="stat-number" data-target="20">0</h3>
+                    <p>مشروع منجز</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project: Qaryat Al Salam -->
+    <section class="featured-project" id="featured">
+        <div class="container">
+            <div class="featured-badge">
+                <i class="fas fa-star"></i>
+                <span>المشروع المميز</span>
+            </div>
+            <div class="featured-content">
+                <div class="featured-text">
+                    <h2 class="featured-title">قرية السلام النموذجية</h2>
+                    <p class="featured-subtitle">مشروعنا الأضخم والأكثر تميزاً</p>
+                    <p class="featured-description">
+                        قرية السلام النموذجية هي تحفة معمارية فريدة، تمثل أكبر مشاريعنا وأكثرها طموحاً.
+                        يضم هذا المجمع السكني النموذجي 1800 وحدة سكنية على مساحة 220 دونم في النجف الأشرف،
+                        مصمم بأحدث المعايير العالمية ليوفر حياة عصرية متكاملة لسكانه.
+                    </p>
+                    <div class="featured-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>1800</h4>
+                                <p>وحدة سكنية</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>220</h4>
+                                <p>دونم مساحة</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>النجف</h4>
+                                <p>الموقع</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>نموذجي</h4>
+                                <p>التصنيف</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-features">
+                        <h4><i class="fas fa-check-double"></i> المميزات الخاصة:</h4>
+                        <ul>
+                            <li><i class="fas fa-circle"></i> تصميم معماري عصري يلبي احتياجات العصر</li>
+                            <li><i class="fas fa-circle"></i> بنية تحتية متكاملة وشبكات حديثة</li>
+                            <li><i class="fas fa-circle"></i> مساحات خضراء واسعة ومناطق ترفيهية</li>
+                            <li><i class="fas fa-circle"></i> أمن وحراسة على مدار الساعة</li>
+                            <li><i class="fas fa-circle"></i> خدمات متكاملة ومرافق حيوية</li>
+                            <li><i class="fas fa-circle"></i> موقع استراتيجي في قلب النجف</li>
+                        </ul>
+                    </div>
+                    <div class="featured-actions">
+                        <button class="btn-featured-details" id="btnFeaturedDetails">
+                            <i class="fas fa-info-circle"></i> المزيد من التفاصيل
+                        </button>
+                        <a href="https://wa.me/966112345678?text=مرحباً، أرغب في الاستفسار عن قرية السلام النموذجية" target="_blank" class="btn-featured-contact">
+                            <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                        </a>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div class="featured-image-wrapper">
+                        <img src="image/photo_2025-12-05_21-11-46.jpg" alt="قرية السلام النموذجية">
+                        <div class="featured-overlay">
+                            <div class="featured-label">
+                                <i class="fas fa-crown"></i>
+                                <span>المشروع الرائد</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">من نحن</h2>
+                <p class="section-subtitle">رواد التطوير العقاري في المنطقة</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="image/photo_2025-12-05_21-11-03.jpg" alt="عن الشركة" class="about-img">
+                </div>
+                <div class="about-text">
+                    <h3>عن الشركة</h3>
+                    <p>هي شركة متخصصة في تنفيذ وإدارة مشاريع البناء والتشييد. تتنوع هذه المشاريع بين المباني السكنية، والتجارية، والصناعية، والبنية التحتية مثل الطرق والجسور. نتولى مجموعة واسعة من المهام تشمل التخطيط، والتصميم، والهندسة، وإدارة المشروع، والتشييد، والصيانة.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>تقديم خدمات عالية الجودة</h4>
+                                <p>نستخدم مواد بناء عالية الجودة تضمن متانة وسلامة المباني</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>الالتزام بالمواعيد الزمنية</h4>
+                                <p>نلتزم بإنجاز المشاريع في الوقت المحدد بكل دقة واحترافية</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>الابتكار والتطوير المستمر</h4>
+                                <p>نسعى دائماً للتطوير واستخدام أحدث التقنيات في البناء</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>المساهمة في التنمية المجتمعية</h4>
+                                <p>نؤمن بدورنا في بناء المجتمع وتطويره</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مشاريعنا</h2>
+                <p class="section-subtitle">اكتشف أحدث مشاريعنا العقارية المتميزة</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured-card">
+                    <div class="featured-ribbon">
+                        <i class="fas fa-crown"></i> المشروع الرئيسي
+                    </div>
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-46.jpg" alt="قرية السلام النموذجية">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag featured">مشروع رائد</span>
+                        <h3>قرية السلام النموذجية ⭐</h3>
+                        <p>مجمع سكني نموذجي بسعة 1800 وحدة سكنية بمساحة 220 دونم - أضخم مشاريعنا وأكثرها تميزاً</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-home"></i> 1800 وحدة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-23.jpg" alt="مجمع الياسر النموذجي">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">سكني</span>
+                        <h3>مجمع الياسر النموذجي</h3>
+                        <p>مجمع سكني فاخر يضم 175 وحدة سكنية فاخرة</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-home"></i> 175 وحدة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-14.jpg" alt="معرض النجف الدولي">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag commercial">تجاري</span>
+                        <h3>تصميم وتنفيذ معرض النجف الدولي</h3>
+                        <p>معرض دولي بتصميم عصري ومرافق متكاملة</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-building"></i> تجاري</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-29.jpg" alt="مجمع ماء الغدير">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">بنية تحتية</span>
+                        <h3>مجمع ماء الغدير</h3>
+                        <p>محطة ضخ ومعالجة مياه بسعة 500 م³ لخدمة المنطقة</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-tint"></i> 500 م³</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-32.jpg" alt="مجمع ماء الرسول الأعظم">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">بنية تحتية</span>
+                        <h3>مجمع ماء الرسول الأعظم</h3>
+                        <p>محطة معالجة مياه متطورة بسعة 1000 م³</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-tint"></i> 1000 م³</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-38.jpg" alt="مجمع الألف دار السكني">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">سكني</span>
+                        <h3>مجمع الألف دار السكني</h3>
+                        <p>مجمع سكني ضخم يلبي احتياجات آلاف العائلات</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-building"></i> سكني</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-33.jpg" alt="استثمار نادي العلوية الترفيهي">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag commercial">ترفيهي</span>
+                        <h3>استثمار نادي العلوية الترفيهي</h3>
+                        <p>مركز ترفيهي متكامل للعائلات مع جميع المرافق</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-futbol"></i> ترفيهي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-34.jpg" alt="مشروع شمال قرى الكوفة">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">بنية تحتية</span>
+                        <h3>مشروع شمال قرى الكوفة</h3>
+                        <p>مشروع بنية تحتية لتطوير منطقة قرى الكوفة</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> الكوفة</span>
+                            <span><i class="fas fa-road"></i> بنية تحتية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="image/photo_2025-12-05_21-11-03.jpg" alt="إنشاء بناية النزاهة">
+                        <div class="project-overlay">
+                            <button class="btn-view">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag commercial">إداري</span>
+                        <h3>إنشاء بناية النزاهة</h3>
+                        <p>مبنى إداري حديث بمواصفات عالمية</p>
+                        <div class="project-details">
+                            <span><i class="fas fa-map-marker-alt"></i> النجف</span>
+                            <span><i class="fas fa-briefcase"></i> إداري</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خدماتنا</h2>
+                <p class="section-subtitle">نقدم مجموعة شاملة من الخدمات العقارية</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>التصميم المعماري</h3>
+                    <p>تصاميم معمارية مبتكرة تجمع بين الجمال والوظائفية</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>البناء والتشييد</h3>
+                    <p>تنفيذ المشاريع بأعلى معايير الجودة والسلامة</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>إدارة المشاريع</h3>
+                    <p>إدارة احترافية تضمن نجاح المشروع من البداية للنهاية</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>التسويق العقاري</h3>
+                    <p>استراتيجيات تسويقية فعالة لبيع وتأجير العقارات</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>الاستشارات العقارية</h3>
+                    <p>استشارات متخصصة لاتخاذ القرار الاستثماري الأمثل</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>الصيانة والإدارة</h3>
+                    <p>خدمات صيانة وإدارة شاملة لما بعد التسليم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p class="section-subtitle">نحن هنا للإجابة على استفساراتك</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-left">
+                    <div class="contact-info">
+                        <h3>معلومات التواصل</h3>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>العنوان</h4>
+                                <p id="contactAddress">الرياض، حي العليا، شارع الملك فهد</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>الهاتف</h4>
+                                <a href="#" id="contactPhone" class="whatsapp-link" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> <span id="contactPhoneText">+966 11 234 5678</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p id="contactEmail">info@company.com</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" id="socialWhatsApp" target="_blank" rel="noopener noreferrer" class="whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" id="socialFacebook" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" id="socialTwitter" target="_blank" rel="noopener noreferrer" title="X (Twitter)" aria-label="X">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="#" id="socialInstagram" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" id="socialLinkedIn" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <h3>أرسل لنا رسالة</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="الاسم" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="البريد الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الهاتف" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="رسالتك" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                    </form>
+                </div>
+                
+                <div class="contact-map-container">
+                    <h3>موقعنا على الخريطة</h3>
+                    <div id="branchesList" class="branches-list"></div>
+                    <div id="map" style="height: 500px; width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="image/لوكو القرية copy.png" alt="شعار الشركة" class="logo-img">
+                        <span>سمو النبلاء</span>
+                    </div>
+                    <p>شركة سمو النبلاء للمقاولات العامة المحدودة - نبني المستقبل معاً من خلال مشاريع عقارية متميزة تجمع بين الجودة والابتكار</p>
+                    <div class="footer-social" aria-label="روابط التواصل الاجتماعي">
+                        <a href="https://wa.me/966112345678" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com/yourcompany" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                       
+                        <a href="https://instagram.com/yourcompany" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                     
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#projects">المشاريع</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">التصميم المعماري</a></li>
+                        <li><a href="#">البناء والتشييد</a></li>
+                        <li><a href="#">إدارة المشاريع</a></li>
+                        <li><a href="#">الاستشارات العقارية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>النشرة البريدية</h4>
+                    <p>اشترك للحصول على آخر الأخبار والعروض</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="بريدك الإلكتروني">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 شركة سمو النبلاء للمقاولات العامة المحدودة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966112345678?text=مرحباً، أرغب في الاستفسار عن خدماتكم"
+       class="whatsapp-float"
+       target="_blank"
+       title="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-tag" id="modalTag">سكني</span>
+                    <h2 id="modalTitle">عنوان المشروع</h2>
+                    <p id="modalDescription">وصف المشروع</p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>الموقع</h4>
+                                <p id="modalLocation">الموقع</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <h4>عدد الوحدات</h4>
+                                <p id="modalUnits">عدد الوحدات</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>الحالة</h4>
+                                <p id="modalStatus">قيد التنفيذ</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-layer-group"></i>
+                            <div>
+                                <h4>النوع</h4>
+                                <p id="modalType">سكني</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-features">
+                        <h3>المميزات الرئيسية</h3>
+                        <ul id="modalFeatures">
+                            <li><i class="fas fa-check-circle"></i> تصميم عصري ومتطور</li>
+                            <li><i class="fas fa-check-circle"></i> مواد بناء عالية الجودة</li>
+                            <li><i class="fas fa-check-circle"></i> موقع استراتيجي متميز</li>
+                            <li><i class="fas fa-check-circle"></i> خدمات متكاملة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="particles-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
