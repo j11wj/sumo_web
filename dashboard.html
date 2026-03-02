@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - سمو النبلاء</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="image/لوكو القرية copy.png" alt="شعار الشركة" class="logo-img">
+                <span>سمو النبلاء</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-home"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="#projects" class="nav-item" data-section="projects">
+                <i class="fas fa-building"></i>
+                <span>المشاريع</span>
+            </a>
+            <a href="#services" class="nav-item" data-section="services">
+                <i class="fas fa-briefcase"></i>
+                <span>الخدمات</span>
+            </a>
+            <a href="#stats" class="nav-item" data-section="stats">
+                <i class="fas fa-chart-line"></i>
+                <span>الإحصائيات</span>
+            </a>
+            <a href="#about" class="nav-item" data-section="about">
+                <i class="fas fa-info-circle"></i>
+                <span>من نحن</span>
+            </a>
+            <a href="#contact" class="nav-item" data-section="contact">
+                <i class="fas fa-envelope"></i>
+                <span>الرسائل</span>
+            </a>
+            <a href="#newsletter" class="nav-item" data-section="newsletter">
+                <i class="fas fa-paper-plane"></i>
+                <span>النشرة البريدية</span>
+            </a>
+            <a href="#settings" class="nav-item" data-section="settings">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+            <a href="#branches" class="nav-item" data-section="branches">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>الفروع</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <p class="user-name">المدير العام</p>
+                    <p class="user-role">مسؤول النظام</p>
+                </div>
+            </div>
+            <a href="#" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>تسجيل الخروج</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="page-title">لوحة التحكم</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="البحث...">
+                </div>
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">5</span>
+                </button>
+                <div class="header-user">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=667eea&color=fff" alt="المدير">
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="content-wrapper" id="contentWrapper">
+
+            <!-- Dashboard Section -->
+            <section class="content-section active" id="dashboard-section">
+                <div class="stats-overview">
+                    <div class="stat-card">
+                        <div class="stat-icon projects">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>15</h3>
+                            <p>مشروع منجز</p>
+                        </div>
+                        <div class="stat-badge">
+                            <i class="fas fa-arrow-up"></i> 12%
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon services">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2,000</h3>
+                            <p>وحدة سكنية</p>
+                        </div>
+                        <div class="stat-badge">
+                            <i class="fas fa-arrow-up"></i> 5%
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon messages">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>23%</h3>
+                            <p>نسبة الإنجاز</p>
+                        </div>
+                        <div class="stat-badge">
+                            <i class="fas fa-arrow-up"></i> 3%
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon subscribers">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>مشروع قيد التنفيذ</p>
+                        </div>
+                        <div class="stat-badge">
+                            <i class="fas fa-arrow-up"></i> 18%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card recent-projects">
+                        <div class="card-header">
+                            <h3><i class="fas fa-building"></i> المشاريع الأخيرة</h3>
+                            <a href="#" class="view-all">عرض الكل</a>
+                        </div>
+                        <div class="card-content">
+                            <div class="project-item">
+                                <img src="https://via.placeholder.com/60" alt="مشروع">
+                                <div class="project-info">
+                                    <h4>مجمع سكني فاخر</h4>
+                                    <p>الرياض</p>
+                                </div>
+                                <span class="status-badge active">قيد التنفيذ</span>
+                            </div>
+                            <div class="project-item">
+                                <img src="https://via.placeholder.com/60" alt="مشروع">
+                                <div class="project-info">
+                                    <h4>برج تجاري</h4>
+                                    <p>جدة</p>
+                                </div>
+                                <span class="status-badge completed">مكتمل</span>
+                            </div>
+                            <div class="project-item">
+                                <img src="https://via.placeholder.com/60" alt="مشروع">
+                                <div class="project-info">
+                                    <h4>مركز تسوق</h4>
+                                    <p>الدمام</p>
+                                </div>
+                                <span class="status-badge pending">قيد المراجعة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card recent-messages">
+                        <div class="card-header">
+                            <h3><i class="fas fa-envelope"></i> الرسائل الأخيرة</h3>
+                            <a href="#" class="view-all">عرض الكل</a>
+                        </div>
+                        <div class="card-content">
+                            <div class="message-item unread">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="message-content">
+                                    <h4>أحمد محمد</h4>
+                                    <p>استفسار عن المشروع السكني</p>
+                                    <span class="message-time">منذ 5 دقائق</span>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="message-content">
+                                    <h4>فاطمة عبدالله</h4>
+                                    <p>طلب عرض أسعار</p>
+                                    <span class="message-time">منذ ساعة</span>
+                                </div>
+                            </div>
+                            <div class="message-item">
+                                <div class="message-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="message-content">
+                                    <h4>خالد السعيد</h4>
+                                    <p>استشارة هندسية</p>
+                                    <span class="message-time">منذ ساعتين</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card chart-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-bar"></i> إحصائيات المشاريع</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="chart-placeholder">
+                                <canvas id="projectsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="content-section" id="projects-section">
+                <div class="section-header">
+                    <h2>إدارة المشاريع</h2>
+                    <button class="btn-add"><i class="fas fa-plus"></i> إضافة مشروع جديد</button>
+                </div>
+
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <button class="filter-btn active">الكل</button>
+                        <button class="filter-btn">قيد التنفيذ</button>
+                        <button class="filter-btn">مكتملة</button>
+                        <button class="filter-btn">قيد المراجعة</button>
+                    </div>
+                    <div class="search-filter">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="البحث عن مشروع...">
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>اسم المشروع</th>
+                                <th>الموقع</th>
+                                <th>الفئة</th>
+                                <th>الحالة</th>
+                                <th>نسبة الإنجاز</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="table-project">
+                                        <img src="https://via.placeholder.com/40" alt="مشروع">
+                                        <span>مجمع سكني فاخر</span>
+                                    </div>
+                                </td>
+                                <td>الرياض</td>
+                                <td><span class="category-badge residential">سكني</span></td>
+                                <td><span class="status-badge active">قيد التنفيذ</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                        <span>75%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-action view"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="table-project">
+                                        <img src="https://via.placeholder.com/40" alt="مشروع">
+                                        <span>برج تجاري</span>
+                                    </div>
+                                </td>
+                                <td>جدة</td>
+                                <td><span class="category-badge commercial">تجاري</span></td>
+                                <td><span class="status-badge completed">مكتمل</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                        <span>100%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-action view"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>
+                                    <div class="table-project">
+                                        <img src="https://via.placeholder.com/40" alt="مشروع">
+                                        <span>مركز تسوق</span>
+                                    </div>
+                                </td>
+                                <td>الدمام</td>
+                                <td><span class="category-badge commercial">تجاري</span></td>
+                                <td><span class="status-badge pending">قيد المراجعة</span></td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 45%"></div>
+                                        <span>45%</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                        <button class="btn-action view"><i class="fas fa-eye"></i></button>
+                                        <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="content-section" id="services-section">
+                <div class="section-header">
+                    <h2>إدارة الخدمات</h2>
+                    <button class="btn-add"><i class="fas fa-plus"></i> إضافة خدمة جديدة</button>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card-dash">
+                        <div class="service-icon-dash">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>البناء والتشييد</h3>
+                        <p>تنفيذ مشاريع بناء متكاملة بأعلى معايير الجودة</p>
+                        <div class="card-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i> تعديل</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card-dash">
+                        <div class="service-icon-dash">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>التصميم المعماري</h3>
+                        <p>تصاميم معمارية مبتكرة تجمع بين الجمال والوظيفة</p>
+                        <div class="card-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i> تعديل</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card-dash">
+                        <div class="service-icon-dash">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>الصيانة والتشغيل</h3>
+                        <p>خدمات صيانة شاملة لضمان استمرارية المشاريع</p>
+                        <div class="card-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i> تعديل</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card-dash">
+                        <div class="service-icon-dash">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>إدارة المشاريع</h3>
+                        <p>إدارة احترافية للمشاريع من التخطيط حتى التسليم</p>
+                        <div class="card-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i> تعديل</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="content-section" id="stats-section">
+                <div class="section-header">
+                    <h2>إدارة الإحصائيات</h2>
+                    <button class="btn-add"><i class="fas fa-save"></i> حفظ التغييرات</button>
+                </div>
+
+                <div class="stats-editor">
+                    <div class="editor-card">
+                        <div class="editor-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="editor-content">
+                            <label>مشروع منجز</label>
+                            <input type="number" value="15" class="stat-input">
+                        </div>
+                    </div>
+
+                    <div class="editor-card">
+                        <div class="editor-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="editor-content">
+                            <label>وحدة سكنية</label>
+                            <input type="number" value="2000" class="stat-input">
+                        </div>
+                    </div>
+
+                    <div class="editor-card">
+                        <div class="editor-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="editor-content">
+                            <label>نسبة الإنجاز %</label>
+                            <input type="number" value="23" class="stat-input">
+                        </div>
+                    </div>
+
+                    <div class="editor-card">
+                        <div class="editor-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="editor-content">
+                            <label>مشروع قيد التنفيذ</label>
+                            <input type="number" value="8" class="stat-input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Messages Section -->
+            <section class="content-section" id="contact-section">
+                <div class="section-header">
+                    <h2>الرسائل الواردة</h2>
+                    <div class="header-actions">
+                        <button class="btn-filter"><i class="fas fa-filter"></i> تصفية</button>
+                        <button class="btn-export"><i class="fas fa-download"></i> تصدير</button>
+                    </div>
+                </div>
+
+                <div class="messages-container">
+                    <div class="message-card">
+                        <div class="message-header">
+                            <div class="sender-info">
+                                <div class="sender-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4>أحمد محمد علي</h4>
+                                    <span class="message-date"><i class="fas fa-clock"></i> منذ 5 دقائق</span>
+                                </div>
+                            </div>
+                            <span class="message-status unread">جديد</span>
+                        </div>
+                        <div class="message-body">
+                            <p><strong>البريد الإلكتروني:</strong> ahmed@example.com</p>
+                            <p><strong>الهاتف:</strong> +966 50 123 4567</p>
+                            <p><strong>الموضوع:</strong> استفسار عن المشروع السكني</p>
+                            <p><strong>الرسالة:</strong> أرغب في الحصول على معلومات تفصيلية عن المشروع السكني في الرياض...</p>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn-reply"><i class="fas fa-reply"></i> رد</button>
+                            <button class="btn-archive"><i class="fas fa-archive"></i> أرشفة</button>
+                            <button class="btn-delete-msg"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+
+                    <div class="message-card read">
+                        <div class="message-header">
+                            <div class="sender-info">
+                                <div class="sender-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div>
+                                    <h4>فاطمة عبدالله</h4>
+                                    <span class="message-date"><i class="fas fa-clock"></i> منذ ساعة</span>
+                                </div>
+                            </div>
+                            <span class="message-status read">مقروء</span>
+                        </div>
+                        <div class="message-body">
+                            <p><strong>البريد الإلكتروني:</strong> fatima@example.com</p>
+                            <p><strong>الهاتف:</strong> +966 55 987 6543</p>
+                            <p><strong>الموضوع:</strong> طلب عرض أسعار</p>
+                            <p><strong>الرسالة:</strong> أود الحصول على عرض أسعار لمشروع بناء فيلا في جدة...</p>
+                        </div>
+                        <div class="message-actions">
+                            <button class="btn-reply"><i class="fas fa-reply"></i> رد</button>
+                            <button class="btn-archive"><i class="fas fa-archive"></i> أرشفة</button>
+                            <button class="btn-delete-msg"><i class="fas fa-trash"></i> حذف</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="content-section" id="newsletter-section">
+                <div class="section-header">
+                    <h2>مشتركو النشرة البريدية</h2>
+                    <button class="btn-add"><i class="fas fa-paper-plane"></i> إرسال نشرة</button>
+                </div>
+
+                <div class="subscribers-stats">
+                    <div class="subscriber-stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>2,458</h3>
+                            <p>إجمالي المشتركين</p>
+                        </div>
+                    </div>
+                    <div class="subscriber-stat">
+                        <i class="fas fa-user-plus"></i>
+                        <div>
+                            <h3>126</h3>
+                            <p>مشتركين جدد هذا الشهر</p>
+                        </div>
+                    </div>
+                    <div class="subscriber-stat">
+                        <i class="fas fa-envelope-open"></i>
+                        <div>
+                            <h3>89%</h3>
+                            <p>معدل الفتح</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>البريد الإلكتروني</th>
+                                <th>تاريخ الاشتراك</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>example1@email.com</td>
+                                <td>2024-12-01</td>
+                                <td><span class="status-badge active">نشط</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action send"><i class="fas fa-paper-plane"></i></button>
+                                        <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>example2@email.com</td>
+                                <td>2024-11-28</td>
+                                <td><span class="status-badge active">نشط</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-action send"><i class="fas fa-paper-plane"></i></button>
+                                        <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="content-section" id="settings-section">
+                <div class="section-header">
+                    <h2>الإعدادات</h2>
+                    <button class="btn-add"><i class="fas fa-save"></i> حفظ التغييرات</button>
+                </div>
+
+                <div class="settings-container">
+                    <div class="settings-card">
+                        <h3><i class="fas fa-globe"></i> إعدادات الموقع</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>اسم الموقع</label>
+                                <input type="text" value="شركة سمو النبلاء" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>وصف الموقع</label>
+                                <textarea class="form-textarea">شركة متخصصة في البناء والتشييد</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>البريد الإلكتروني</label>
+                                <input type="email" value="info@company.com" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label>رقم الهاتف</label>
+                                <input type="tel" value="+966 50 123 4567" class="form-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3><i class="fas fa-palette"></i> إعدادات المظهر</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>اللون الرئيسي</label>
+                                <input type="color" value="#667eea" class="form-color">
+                            </div>
+                            <div class="form-group">
+                                <label>اللون الثانوي</label>
+                                <input type="color" value="#764ba2" class="form-color">
+                            </div>
+                            <div class="form-group">
+                                <label>الوضع الليلي</label>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> معلومات العنوان والموقع</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label>العنوان</label>
+                                <input type="text" id="settingAddress" value="الرياض، المملكة العربية السعودية" class="form-input" placeholder="مثال: الرياض، حي العليا، شارع الملك فهد">
+                            </div>
+                            <div class="form-group">
+                                <label>خط العرض (Latitude)</label>
+                                <input type="number" id="settingLatitude" step="0.000001" value="24.7136" class="form-input" placeholder="24.7136">
+                                <small style="color: var(--text-secondary); font-size: 12px; margin-top: 5px; display: block;">يمكنك الحصول على الإحداثيات من <a href="https://www.google.com/maps" target="_blank" style="color: var(--secondary-color);">Google Maps</a></small>
+                            </div>
+                            <div class="form-group">
+                                <label>خط الطول (Longitude)</label>
+                                <input type="number" id="settingLongitude" step="0.000001" value="46.6753" class="form-input" placeholder="46.6753">
+                            </div>
+                            <div class="form-group">
+                                <label>رابط الخريطة (اختياري)</label>
+                                <input type="text" id="settingMapUrl" value="" class="form-input" placeholder="https://maps.google.com/...">
+                            </div>
+                            <div class="form-group" style="margin-top: 20px;">
+                                <button type="button" id="btnGetCurrentLocation" class="btn" style="background: var(--gradient); color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer;">
+                                    <i class="fas fa-crosshairs"></i> الحصول على موقعي الحالي
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3><i class="fas fa-share-alt"></i> روابط التواصل الاجتماعي</h3>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label><i class="fab fa-facebook"></i> Facebook</label>
+                                <input type="url" placeholder="https://facebook.com/..." class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fab fa-twitter"></i> Twitter</label>
+                                <input type="url" placeholder="https://twitter.com/..." class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fab fa-instagram"></i> Instagram</label>
+                                <input type="url" placeholder="https://instagram.com/..." class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fab fa-linkedin"></i> LinkedIn</label>
+                                <input type="url" placeholder="https://linkedin.com/..." class="form-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Branches Section (فروع الشركة) -->
+            <section class="content-section" id="branches-section">
+                <div class="section-header">
+                    <h2>فروع الشركة على الخريطة</h2>
+                    <button class="btn-add" id="btnAddBranch"><i class="fas fa-plus"></i> إضافة فرع جديد</button>
+                </div>
+                <p class="section-desc" style="margin-bottom: 20px; color: var(--text-secondary);">إدارة عناوين الفروع التي تظهر على خريطة الموقع الرئيسي.</p>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>اسم الفرع</th>
+                                <th>العنوان</th>
+                                <th>الإحداثيات</th>
+                                <th>الهاتف</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="branchesTableBody">
+                            <tr>
+                                <td colspan="6" style="text-align: center; padding: 40px; color: var(--text-secondary);">جاري التحميل...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
